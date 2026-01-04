@@ -76,13 +76,30 @@ export const ProjectsSection = () => {
                     ))}
                   </div>
 
-                  {/* Show Project Button in Bottom Right */}
-                  <div className="absolute bottom-6 right-6">
+                  {/* Action Buttons in Bottom Right */}
+                  <div className="absolute bottom-6 right-6 flex gap-3">
+                    {project.github_url && project.github_url !== '#' && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        asChild
+                        className="rounded-full border-primary/30 hover:bg-primary/10 transition-all"
+                      >
+                        <a href={project.github_url} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
                     <Button
-                      onClick={() => window.location.href = `/projects/${project.id}`}
+                      size="sm"
+                      asChild
                       className="rounded-full px-6 hover:scale-105 transition-all shadow-lg shadow-primary/20"
                     >
-                      Show Project
+                      <a href={project.live_url} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Show Project
+                      </a>
                     </Button>
                   </div>
                 </div>

@@ -54,7 +54,7 @@ export const HeroSection = () => {
             Welcome to my portfolio
           </p>
 
-          <h1 className="text-2xl md:text-7xl font-bold mb-6">
+          <h1 className="text-2xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-foreground via-primary to-accent-foreground bg-clip-text text-transparent">
               {about?.name || 'Himavanth Mutte'}
             </span>
@@ -89,21 +89,30 @@ export const HeroSection = () => {
           <div className="flex justify-center gap-6">
             <Button
               variant="ghost"
+              asChild
               className="h-auto w-auto p-4 hover:text-primary hover:bg-primary/10 transition-colors"
             >
-              <Github className="h-24 w-24" />
+              <a href="https://github.com/HimavanthMutte/" target="_blank" rel="noopener noreferrer">
+                <Github className="h-24 w-24" />
+              </a>
             </Button>
             <Button
               variant="ghost"
+              asChild
               className="h-auto w-auto p-4 hover:text-primary hover:bg-primary/10 transition-colors"
             >
-              <Linkedin className="h-24 w-24" />
+              <a href="https://linkedin.com/in/himavanth-mutte/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-24 w-24" />
+              </a>
             </Button>
             <Button
               variant="ghost"
+              asChild
               className="h-auto w-auto p-4 hover:text-primary hover:bg-primary/10 transition-colors"
             >
-              <Mail className="h-96 w-96" />
+              <a href="mailto:himu.mutte5@gmail.com">
+                <Mail className="h-24 w-24" />
+              </a>
             </Button>
           </div>
         </div>
